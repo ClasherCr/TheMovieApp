@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">TheMovieApp</string>
+    <string name="api_key">b944cf16e48f22a47188f48c6ab66cdd</string>
+    <string name="movie">Movie</string>
 </resources>

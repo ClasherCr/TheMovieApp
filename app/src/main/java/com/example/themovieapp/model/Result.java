@@ -47,7 +47,7 @@ public class Result {
         this.totalResult = totalResult;
     }
 
-    public List<Movie> getResults() {
+    public List<com.example.themovieapp.model.Movie> getResults() {
         return results;
     }
 
