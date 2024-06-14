@@ -4,12 +4,12 @@ import android.app.Application;
 
 import androidx.annotation.NonNull;
 import androidx.lifecycle.AndroidViewModel;
-import androidx.lifecycle.LiveData;
+import androidx.lifecycle.MutableLiveData;
 
 import com.example.themovieapp.model.Movie;
 import com.example.themovieapp.model.MovieRepository;
 
-import java.util.List;
+import java.util.ArrayList;
 
 public class MainActivityViewModel extends AndroidViewModel {
 
@@ -21,7 +21,7 @@ public class MainActivityViewModel extends AndroidViewModel {
     }
 
     // Live Data
-    public LiveData<List<Movie>> getAllMovies(){
+    public MutableLiveData<ArrayList<Movie>> getAllMovies(){
         return repository.getMutableLiveData();
     }
 

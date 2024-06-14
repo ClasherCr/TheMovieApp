@@ -9,7 +9,6 @@ import com.example.themovieapp.serviceapi.MovieApiService;
 import com.example.themovieapp.serviceapi.RetrofitInstance;
 
 import java.util.ArrayList;
-import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -18,14 +17,14 @@ import retrofit2.Response;
 public class MovieRepository {
 
     private ArrayList<Movie> movies = new ArrayList<>();
-    private MutableLiveData<List<Movie>> mutableLiveData = new MutableLiveData<>();
+    private MutableLiveData<ArrayList<Movie>> mutableLiveData = new MutableLiveData<>();
     private Application application;
 
     public MovieRepository(Application application) {
         this.application = application;
     }
 
-    public MutableLiveData<List<Movie>> getMutableLiveData(){
+    public MutableLiveData<ArrayList<Movie>> getMutableLiveData(){
         MovieApiService movieApiService = RetrofitInstance.getService();
 
         Call<Result> call = movieApiService.
